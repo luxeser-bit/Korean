@@ -6,7 +6,7 @@ function App() {
   const [selectedUnit, setSelectedUnit] = useState(units[0]);
 
   const text = ui[language];
-  const totalLessons = useMemo(() => units.reduce((sum, unit) => sum + unit.lessons.length, 0), []);
+  const totalSections = useMemo(() => units.reduce((sum, unit) => sum + unit.lessons.en.length, 0), []);
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -21,6 +21,7 @@ function App() {
         <section className="page-heading" aria-labelledby="course-title">
           <h1 id="course-title">{text.pageTitle}</h1>
           <p>{text.tagline}</p>
+          <p className="disclaimer">{text.disclaimer}</p>
         </section>
 
         <section className="course-layout" aria-label="Course catalog">
@@ -37,7 +38,7 @@ function App() {
             ))}
           </div>
 
-          <UnitDetails unit={selectedUnit} text={text} language={language} totalLessons={totalLessons} />
+          <UnitDetails unit={selectedUnit} text={text} language={language} totalSections={totalSections} />
         </section>
       </main>
 
@@ -49,9 +50,9 @@ function App() {
 function Header({ language, text, onLanguageChange }) {
   return (
     <header className="site-header">
-      <a className="logo" href="#top" aria-label="HanTalk Korean">
-        <span className="logo-mark" aria-hidden="true">H</span>
-        <span>HanTalk</span>
+      <a className="logo" href="#top" aria-label="Russian localization proposal">
+        <span className="logo-mark" aria-hidden="true">RU</span>
+        <span>Localization Proposal</span>
       </a>
 
       <nav className="nav-links" aria-label="Main navigation">
@@ -72,35 +73,45 @@ function Header({ language, text, onLanguageChange }) {
 }
 
 function UnitRow({ unit, text, language, isActive, onSelect }) {
+  const localizedTitle = language === "ru" ? unit.title.ru : unit.title.ru;
+
   return (
     <button className={`unit-row ${isActive ? "active" : ""}`} type="button" role="listitem" onClick={onSelect}>
       <span className="unit-number">{text.unitLabel} {unit.number}</span>
       <span className="unit-copy">
-        <strong>{unit.title.ko}</strong>
-        <span>{unit.title[language]}</span>
+        <strong>{unit.title.en}</strong>
+        <span>{localizedTitle}</span>
       </span>
-      <span className="unit-meta">{unit.lessons.length} {text.lessonsLabel}</span>
+      <span className="unit-meta">{unit.lessons[language].length} {text.lessonsLabel}</span>
     </button>
   );
 }
 
-function UnitDetails({ unit, text, language, totalLessons }) {
+function UnitDetails({ unit, text, language, totalSections }) {
   return (
     <aside className="unit-details" aria-label={text.selectedTitle}>
       <div className="details-card">
         <p className="details-kicker">{text.unitLabel} {unit.number}</p>
         <h2>{unit.title[language]}</h2>
-        <p className="details-ko">{unit.title.ko}</p>
+        <p className="details-ko">{unit.title.en}</p>
         <p className="details-summary">{unit.summary[language]}</p>
 
         <div className="details-stats" aria-label="Course stats">
           <span>{text.levelLabel}: {unit.level}</span>
           <span>{units.length} units</span>
-          <span>{totalLessons} {text.lessonsLabel}</span>
+          <span>{totalSections} {text.lessonsLabel}</span>
         </div>
 
+        <div className="title-pair">
+          <span>{text.sourceTitle}</span>
+          <strong>{unit.title.en}</strong>
+          <span>{text.russianTitle}</span>
+          <strong>{unit.title.ru}</strong>
+        </div>
+
+        <p className="scope-title">{text.localizationScope}</p>
         <div className="mini-lessons">
-          {unit.lessons.map((lesson, index) => (
+          {unit.lessons[language].map((lesson, index) => (
             <div className="mini-lesson" key={lesson}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               <strong>{lesson}</strong>
@@ -118,9 +129,9 @@ function Footer({ text }) {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <a className="logo footer-logo" href="#top" aria-label="HanTalk Korean">
-          <span className="logo-mark" aria-hidden="true">H</span>
-          <span>HanTalk</span>
+        <a className="logo footer-logo" href="#top" aria-label="Russian localization proposal">
+          <span className="logo-mark" aria-hidden="true">RU</span>
+          <span>Localization Proposal</span>
         </a>
         <p>{text.tagline}</p>
       </div>

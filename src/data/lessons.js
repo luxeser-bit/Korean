@@ -4,21 +4,24 @@ export const ui = {
     navKorean: "Учить корейский",
     navJapanese: "Учить японский",
     language: "Русский",
-    pageTitle: "Учить корейский",
-    unitLabel: "Юнит",
+    pageTitle: "Learn Korean",
+    unitLabel: "Unit",
     levelLabel: "Уровень",
-    lessonsLabel: "уроков",
-    openUnit: "Открыть юнит",
-    selectedTitle: "Содержание юнита",
-    selectedHint: "Формат можно расширить до отдельных страниц уроков, как в каталоге.",
+    lessonsLabel: "раздела",
+    selectedTitle: "Русская локализация юнита",
+    selectedHint: "Этот прототип показывает, как русская локализация может лечь поверх существующей структуры курса Teuida.",
     aboutTitle: "О нас",
     learningTitle: "Обучение",
     termsTitle: "Правила и приватность",
     socialTitle: "Соцсети",
-    tagline: "Разговорный корейский по жизненным сценариям.",
+    tagline: "Неофициальный прототип русской локализации для предложения команде Teuida.",
+    disclaimer: "Структура юнитов соответствует публичной странице Teuida. Тексты на русском подготовлены как демонстрационный слой локализации; проект не является официальным продуктом Teuida.",
     appStore: "App Store",
     googlePlay: "Google Play",
-    copyright: "© 2026 HanTalk. Учебный демо-проект."
+    sourceTitle: "Оригинальное название",
+    russianTitle: "Русский вариант",
+    localizationScope: "Что локализовать",
+    copyright: "© 2026 HanTalk. Неофициальный localization prototype."
   },
   en: {
     navBlog: "Blog",
@@ -28,220 +31,228 @@ export const ui = {
     pageTitle: "Learn Korean",
     unitLabel: "Unit",
     levelLabel: "Level",
-    lessonsLabel: "lessons",
-    openUnit: "Open unit",
-    selectedTitle: "Unit Contents",
-    selectedHint: "This format can grow into separate lesson pages like a course catalog.",
+    lessonsLabel: "sections",
+    selectedTitle: "Russian Localization Layer",
+    selectedHint: "This prototype shows how Russian localization can map onto Teuida's existing course structure.",
     aboutTitle: "About Us",
     learningTitle: "Learning",
     termsTitle: "Privacy And Terms",
     socialTitle: "Social",
-    tagline: "Speaking Korean through everyday scenarios.",
+    tagline: "Unofficial Russian localization prototype for a Teuida proposal.",
+    disclaimer: "Unit structure follows Teuida's public course page. Russian text is a demonstration localization layer; this is not an official Teuida product.",
     appStore: "App Store",
     googlePlay: "Google Play",
-    copyright: "© 2026 HanTalk. Educational demo project."
+    sourceTitle: "Original title",
+    russianTitle: "Russian title",
+    localizationScope: "Localization scope",
+    copyright: "© 2026 HanTalk. Unofficial localization prototype."
   }
+};
+
+const localizationScope = {
+  en: ["Unit title", "Lesson labels", "Navigation and help text"],
+  ru: ["Название юнита", "Подписи уроков", "Навигация и справочный текст"]
 };
 
 export const units = [
   {
     number: "01",
     level: "Beginner",
-    title: { ko: "인사와 자기소개", en: "Basic Greetings", ru: "Приветствия и знакомство" },
+    title: { en: "Korean Blind Date", ru: "Свидание вслепую по-корейски" },
     summary: {
-      en: "Say hello, introduce yourself, and respond politely.",
-      ru: "Поздороваться, представиться и вежливо ответить."
+      en: "Localized entry point for a dating scenario unit.",
+      ru: "Локализация юнита со сценарием знакомства и свидания."
     },
-    lessons: ["안녕하세요", "저는 다리아예요", "만나서 반가워요"]
+    lessons: localizationScope
   },
   {
     number: "02",
     level: "Beginner",
-    title: { ko: "하루 일과", en: "Talking about Your Day", ru: "Распорядок дня" },
+    title: { en: "First Day At Cafe Job", ru: "Первый день работы в кафе" },
     summary: {
-      en: "Describe simple daily routines and time.",
-      ru: "Описать простые ежедневные действия и время."
+      en: "Russian layer for cafe-work onboarding phrases and lesson labels.",
+      ru: "Русский слой для фраз и подписей уроков о первом дне работы в кафе."
     },
-    lessons: ["아침에 일어나요", "학교에 가요", "밤에 쉬어요"]
+    lessons: localizationScope
   },
   {
     number: "03",
     level: "Beginner",
-    title: { ko: "친구와 약속", en: "Making Plans with Friends", ru: "Встреча с друзьями" },
+    title: { en: "Korean Office", ru: "Корейский офис" },
     summary: {
-      en: "Suggest a time, place, and activity.",
-      ru: "Предложить время, место и занятие."
+      en: "Office scenario localization for workplace context.",
+      ru: "Локализация офисного сценария и рабочего контекста."
     },
-    lessons: ["시간 있어요?", "토요일 어때요?", "카페에서 만나요"]
+    lessons: localizationScope
   },
   {
     number: "04",
     level: "Beginner",
-    title: { ko: "식당 주문", en: "Ordering at a Restaurant", ru: "Заказ в ресторане" },
+    title: { en: "Korean Restaurant: Ordering In The Restaurant", ru: "Корейский ресторан: заказ в ресторане" },
     summary: {
-      en: "Ask for a menu, order food, and pay.",
-      ru: "Попросить меню, заказать еду и оплатить."
+      en: "Restaurant ordering unit with Russian section naming.",
+      ru: "Юнит про заказ в ресторане с русскими названиями разделов."
     },
-    lessons: ["메뉴 주세요", "이거 하나 주세요", "계산할게요"]
+    lessons: localizationScope
   },
   {
     number: "05",
     level: "Beginner",
-    title: { ko: "가게에서 물건 사기", en: "Shopping in Korea", ru: "Покупки в Корее" },
+    title: { en: "Street Interview", ru: "Уличное интервью" },
     summary: {
-      en: "Ask prices, sizes, and payment options.",
-      ru: "Спросить цену, размер и способ оплаты."
+      en: "Street interview scenario mapped for Russian learners.",
+      ru: "Сценарий уличного интервью, адаптированный для русскоязычных учеников."
     },
-    lessons: ["얼마예요?", "다른 사이즈 있어요?", "카드 돼요?"]
+    lessons: localizationScope
   },
   {
     number: "06",
     level: "Beginner",
-    title: { ko: "길 찾기", en: "Asking for Directions", ru: "Как спросить дорогу" },
+    title: { en: "Making Appointment With Friends", ru: "Как договориться о встрече с друзьями" },
     summary: {
-      en: "Ask where something is and follow simple directions.",
-      ru: "Спросить, где находится место, и понять простой маршрут."
+      en: "Russian localization for making plans and appointments.",
+      ru: "Русская локализация сценария про планы и договоренности."
     },
-    lessons: ["어디예요?", "왼쪽으로 가세요", "가까워요"]
+    lessons: localizationScope
   },
   {
     number: "07",
     level: "Beginner",
-    title: { ko: "어제 한 일", en: "Talking about the Past", ru: "Разговор о прошлом" },
+    title: { en: "Cafeteria", ru: "Столовая" },
     summary: {
-      en: "Say what you did yesterday or last week.",
-      ru: "Сказать, что вы делали вчера или на прошлой неделе."
+      en: "Cafeteria unit labels prepared for Russian UI.",
+      ru: "Русские подписи и названия для юнита о столовой."
     },
-    lessons: ["어제 뭐 했어요?", "영화를 봤어요", "친구를 만났어요"]
+    lessons: localizationScope
   },
   {
     number: "08",
     level: "Beginner",
-    title: { ko: "주말 계획", en: "Weekend Plans", ru: "Планы на выходные" },
+    title: { en: "First Lesson With The Teacher", ru: "Первый урок с преподавателем" },
     summary: {
-      en: "Talk about future plans and preferences.",
-      ru: "Обсудить планы и предпочтения."
+      en: "First-class scenario localized for Russian onboarding.",
+      ru: "Сценарий первого урока, локализованный для русскоязычного онбординга."
     },
-    lessons: ["주말에 뭐 해요?", "집에서 쉴 거예요", "같이 갈까요?"]
+    lessons: localizationScope
   },
   {
     number: "09",
     level: "Beginner",
-    title: { ko: "가격 비교", en: "Comparing Prices", ru: "Сравнение цен" },
+    title: { en: "Convenience Store", ru: "Магазин у дома" },
     summary: {
-      en: "Compare items and choose what fits.",
-      ru: "Сравнить товары и выбрать подходящий."
+      en: "Convenience store scenario with Russian course labels.",
+      ru: "Сценарий магазина у дома с русскими подписями курса."
     },
-    lessons: ["이게 더 싸요", "조금 비싸요", "이걸로 할게요"]
+    lessons: localizationScope
   },
   {
     number: "10",
     level: "Beginner",
-    title: { ko: "약속 바꾸기", en: "Changing an Appointment", ru: "Как перенести встречу" },
+    title: { en: "Ordering At A Coffee Shop", ru: "Заказ в кофейне" },
     summary: {
-      en: "Reschedule politely and confirm details.",
-      ru: "Вежливо перенести встречу и подтвердить детали."
+      en: "Coffee shop ordering unit ready for Russian localization.",
+      ru: "Юнит про заказ в кофейне, подготовленный под русскую локализацию."
     },
-    lessons: ["시간을 바꿀 수 있어요?", "내일 괜찮아요?", "다시 확인할게요"]
+    lessons: localizationScope
   },
   {
     number: "11",
-    level: "Intermediate",
-    title: { ko: "병원 방문", en: "Going to the Clinic", ru: "Визит в клинику" },
+    level: "Beginner",
+    title: { en: "Meeting Your Korean Friend", ru: "Встреча с корейским другом" },
     summary: {
-      en: "Explain symptoms and understand basic instructions.",
-      ru: "Объяснить симптомы и понять базовые рекомендации."
+      en: "Friend-meeting scenario mapped to Russian title and UI text.",
+      ru: "Сценарий встречи с другом с русским названием и UI-текстами."
     },
-    lessons: ["어디가 아파요?", "열이 있어요", "약을 드세요"]
+    lessons: localizationScope
   },
   {
     number: "12",
-    level: "Intermediate",
-    title: { ko: "여행 준비", en: "Planning a Trip", ru: "Подготовка к поездке" },
+    level: "Beginner",
+    title: { en: "Korean Restaurant: Korean BBQ Restaurant", ru: "Корейский ресторан: корейское барбекю" },
     summary: {
-      en: "Talk about reservations, luggage, and schedules.",
-      ru: "Обсудить бронь, багаж и расписание."
+      en: "Korean BBQ restaurant section localized for Russian learners.",
+      ru: "Раздел про корейское барбекю, локализованный для русскоязычных учеников."
     },
-    lessons: ["예약했어요", "짐을 챙겨요", "몇 시에 출발해요?"]
+    lessons: localizationScope
   },
   {
     number: "13",
-    level: "Intermediate",
-    title: { ko: "처음 만난 사람", en: "First Conversation", ru: "Первый разговор" },
+    level: "Beginner",
+    title: { en: "Korean Friend's Home", ru: "Дома у корейского друга" },
     summary: {
-      en: "Keep a natural first conversation going.",
-      ru: "Поддержать естественный первый разговор."
+      en: "Home-visit scenario with Russian course mapping.",
+      ru: "Сценарий визита домой к другу с русской структурой курса."
     },
-    lessons: ["어디에서 왔어요?", "한국어를 배워요", "취미가 뭐예요?"]
+    lessons: localizationScope
   },
   {
     number: "14",
-    level: "Intermediate",
-    title: { ko: "날씨와 옷차림", en: "Weather and Clothes", ru: "Погода и одежда" },
+    level: "Beginner",
+    title: { en: "Delivery Food In Korea", ru: "Доставка еды в Корее" },
     summary: {
-      en: "Describe weather and talk about what to wear.",
-      ru: "Описать погоду и обсудить, что надеть."
+      en: "Food delivery scenario prepared for Russian localization.",
+      ru: "Сценарий доставки еды, подготовленный для русской локализации."
     },
-    lessons: ["오늘 추워요", "비가 와요", "외투를 입으세요"]
+    lessons: localizationScope
   },
   {
     number: "15",
-    level: "Intermediate",
-    title: { ko: "대중교통", en: "Public Transportation", ru: "Общественный транспорт" },
+    level: "Beginner",
+    title: { en: "Weather In Korea", ru: "Погода в Корее" },
     summary: {
-      en: "Use subway, buses, transfers, and cards.",
-      ru: "Пользоваться метро, автобусами, пересадками и картами."
+      en: "Weather unit with Russian learner-facing labels.",
+      ru: "Юнит о погоде с русскими подписями для учеников."
     },
-    lessons: ["몇 번 버스예요?", "환승해야 해요", "교통카드 있어요"]
+    lessons: localizationScope
   },
   {
     number: "16",
-    level: "Intermediate",
-    title: { ko: "첫 출근", en: "First Day at Work", ru: "Первый день на работе" },
+    level: "Beginner",
+    title: { en: "Starting My First Day At Teuida", ru: "Мой первый день в Teuida" },
     summary: {
-      en: "Introduce yourself at work and ask simple questions.",
-      ru: "Представиться на работе и задать простые вопросы."
+      en: "Brand-specific course section preserved for integration proposal context.",
+      ru: "Брендовый раздел сохранен в контексте предложения интеграции русской локализации."
     },
-    lessons: ["오늘부터 일해요", "잘 부탁드립니다", "회의실이 어디예요?"]
+    lessons: localizationScope
   },
   {
     number: "17",
-    level: "Intermediate",
-    title: { ko: "회사 스몰토크", en: "Small Talk at Work", ru: "Small talk в офисе" },
+    level: "Beginner",
+    title: { en: "A Korean Friend's Birthday", ru: "День рождения корейского друга" },
     summary: {
-      en: "Chat with coworkers naturally and politely.",
-      ru: "Естественно и вежливо поговорить с коллегами."
+      en: "Birthday scenario mapped to Russian course labels.",
+      ru: "Сценарий дня рождения с русскими названиями курса."
     },
-    lessons: ["점심 드셨어요?", "요즘 바빠요?", "커피 마실까요?"]
+    lessons: localizationScope
   },
   {
     number: "18",
-    level: "Intermediate",
-    title: { ko: "점심 먹기", en: "Lunch with Coworkers", ru: "Обед с коллегами" },
+    level: "Beginner",
+    title: { en: "Watching A Korean Drama", ru: "Просмотр корейской дорамы" },
     summary: {
-      en: "Choose a menu and talk during lunch.",
-      ru: "Выбрать меню и поговорить во время обеда."
+      en: "K-drama scenario localized for Russian-speaking learners.",
+      ru: "Сценарий просмотра дорамы, локализованный для русскоязычных учеников."
     },
-    lessons: ["뭐 먹을까요?", "매운 거 괜찮아요?", "맛있게 드세요"]
+    lessons: localizationScope
   },
   {
     number: "19",
-    level: "Intermediate",
-    title: { ko: "노래방 가기", en: "Going to Karaoke", ru: "Поход в караоке" },
+    level: "Beginner",
+    title: { en: "Karaoke In Korea", ru: "Караоке в Корее" },
     summary: {
-      en: "Invite friends and choose songs.",
-      ru: "Пригласить друзей и выбрать песни."
+      en: "Karaoke scenario with Russian localization labels.",
+      ru: "Сценарий караоке с русскими локализационными подписями."
     },
-    lessons: ["노래방 갈래요?", "이 노래 알아요?", "한 곡 더 불러요"]
+    lessons: localizationScope
   },
   {
     number: "20",
-    level: "Intermediate",
-    title: { ko: "편의점 알바", en: "Convenience Store Shift", ru: "Смена в магазине" },
+    level: "Beginner",
+    title: { en: "Chinese Restaurant In Korea", ru: "Китайский ресторан в Корее" },
     summary: {
-      en: "Handle common phrases in a convenience store.",
-      ru: "Использовать типовые фразы в магазине у дома."
+      en: "Chinese restaurant section prepared for Russian course presentation.",
+      ru: "Раздел про китайский ресторан, подготовленный для презентации русской версии."
     },
-    lessons: ["봉투 필요하세요?", "영수증 드릴까요?", "잠시만 기다려 주세요"]
+    lessons: localizationScope
   }
 ];
