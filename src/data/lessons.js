@@ -1,258 +1,183 @@
 export const ui = {
   ru: {
-    navBlog: "Блог",
-    navKorean: "Учить корейский",
-    navJapanese: "Учить японский",
-    language: "Русский",
     pageTitle: "Learn Korean",
+    language: "Русский",
     unitLabel: "Unit",
-    levelLabel: "Уровень",
-    lessonsLabel: "раздела",
-    selectedTitle: "Русская локализация юнита",
-    selectedHint: "Этот прототип показывает, как русская локализация может лечь поверх существующей структуры курса Teuida.",
-    aboutTitle: "О нас",
-    learningTitle: "Обучение",
-    termsTitle: "Правила и приватность",
-    socialTitle: "Соцсети",
-    tagline: "Неофициальный прототип русской локализации для предложения команде Teuida.",
-    disclaimer: "Структура юнитов соответствует публичной странице Teuida. Тексты на русском подготовлены как демонстрационный слой локализации; проект не является официальным продуктом Teuida.",
-    appStore: "App Store",
-    googlePlay: "Google Play",
-    sourceTitle: "Оригинальное название",
-    russianTitle: "Русский вариант",
-    localizationScope: "Что локализовать",
-    copyright: "© 2026 HanTalk. Неофициальный localization prototype."
+    proposalLabel: "Русская локализация",
+    disclaimer: "Неофициальный прототип: структура и названия юнитов повторяют публичный каталог Teuida, русский слой добавлен для демонстрации возможной интеграции.",
+    footerTitle: "Russian localization proposal",
+    footerText: "Карточки сохраняют структуру курса, а русские названия показывают, как может выглядеть третий язык в каталоге."
   },
   en: {
-    navBlog: "Blog",
-    navKorean: "Learn Korean",
-    navJapanese: "Learn Japanese",
-    language: "English",
     pageTitle: "Learn Korean",
+    language: "English",
     unitLabel: "Unit",
-    levelLabel: "Level",
-    lessonsLabel: "sections",
-    selectedTitle: "Russian Localization Layer",
-    selectedHint: "This prototype shows how Russian localization can map onto Teuida's existing course structure.",
-    aboutTitle: "About Us",
-    learningTitle: "Learning",
-    termsTitle: "Privacy And Terms",
-    socialTitle: "Social",
-    tagline: "Unofficial Russian localization prototype for a Teuida proposal.",
-    disclaimer: "Unit structure follows Teuida's public course page. Russian text is a demonstration localization layer; this is not an official Teuida product.",
-    appStore: "App Store",
-    googlePlay: "Google Play",
-    sourceTitle: "Original title",
-    russianTitle: "Russian title",
-    localizationScope: "Localization scope",
-    copyright: "© 2026 HanTalk. Unofficial localization prototype."
+    proposalLabel: "Russian localization",
+    disclaimer: "Unofficial prototype: unit structure and titles follow Teuida's public catalog, with Russian added as a proposed localization layer.",
+    footerTitle: "Russian localization proposal",
+    footerText: "Cards preserve the course structure while Russian titles show how a third language could fit into the catalog."
   }
-};
-
-const localizationScope = {
-  en: ["Unit title", "Lesson labels", "Navigation and help text"],
-  ru: ["Название юнита", "Подписи уроков", "Навигация и справочный текст"]
 };
 
 export const units = [
   {
     number: "01",
-    level: "Beginner",
-    title: { en: "Korean Blind Date", ru: "Свидание вслепую по-корейски" },
-    summary: {
-      en: "Localized entry point for a dating scenario unit.",
-      ru: "Локализация юнита со сценарием знакомства и свидания."
-    },
-    lessons: localizationScope
+    ko: "인사하기와 자기소개하기",
+    en: "Basic Greetings",
+    ru: "Базовые приветствия",
+    icon: "hand",
+    color: "#4cc8c0"
   },
   {
     number: "02",
-    level: "Beginner",
-    title: { en: "First Day At Cafe Job", ru: "Первый день работы в кафе" },
-    summary: {
-      en: "Russian layer for cafe-work onboarding phrases and lesson labels.",
-      ru: "Русский слой для фраз и подписей уроков о первом дне работы в кафе."
-    },
-    lessons: localizationScope
+    ko: "하루일과 말하기",
+    en: "Talking about Your Day",
+    ru: "Как рассказать о своем дне",
+    icon: "alarm",
+    color: "#ff875f"
   },
   {
     number: "03",
-    level: "Beginner",
-    title: { en: "Korean Office", ru: "Корейский офис" },
-    summary: {
-      en: "Office scenario localization for workplace context.",
-      ru: "Локализация офисного сценария и рабочего контекста."
-    },
-    lessons: localizationScope
+    ko: "친구와 약속하기(I)",
+    en: "Making Appointment with Friends",
+    ru: "Как договориться о встрече с друзьями",
+    icon: "fist",
+    color: "#ffbd13"
   },
   {
     number: "04",
-    level: "Beginner",
-    title: { en: "Korean Restaurant: Ordering In The Restaurant", ru: "Корейский ресторан: заказ в ресторане" },
-    summary: {
-      en: "Restaurant ordering unit with Russian section naming.",
-      ru: "Юнит про заказ в ресторане с русскими названиями разделов."
-    },
-    lessons: localizationScope
+    ko: "식당에서 주문하기",
+    en: "Ordering in the Restaurant",
+    ru: "Заказ в ресторане",
+    icon: "dish",
+    color: "#22cfa6"
   },
   {
     number: "05",
-    level: "Beginner",
-    title: { en: "Street Interview", ru: "Уличное интервью" },
-    summary: {
-      en: "Street interview scenario mapped for Russian learners.",
-      ru: "Сценарий уличного интервью, адаптированный для русскоязычных учеников."
-    },
-    lessons: localizationScope
+    ko: "한국에서 물건 사기(I)",
+    en: "Shopping in Korea",
+    ru: "Покупки в Корее",
+    icon: "cart",
+    color: "#4bbbea"
   },
   {
     number: "06",
-    level: "Beginner",
-    title: { en: "Making Appointment With Friends", ru: "Как договориться о встрече с друзьями" },
-    summary: {
-      en: "Russian localization for making plans and appointments.",
-      ru: "Русская локализация сценария про планы и договоренности."
-    },
-    lessons: localizationScope
+    ko: "길 물어보기",
+    en: "Asking for Directions",
+    ru: "Как спросить дорогу",
+    icon: "map",
+    color: "#f271bd"
   },
   {
     number: "07",
-    level: "Beginner",
-    title: { en: "Cafeteria", ru: "Столовая" },
-    summary: {
-      en: "Cafeteria unit labels prepared for Russian UI.",
-      ru: "Русские подписи и названия для юнита о столовой."
-    },
-    lessons: localizationScope
+    ko: "급식실에서 식사하기",
+    en: "Cafeteria",
+    ru: "Столовая",
+    icon: "tray",
+    color: "#7b71ef"
   },
   {
     number: "08",
-    level: "Beginner",
-    title: { en: "First Lesson With The Teacher", ru: "Первый урок с преподавателем" },
-    summary: {
-      en: "First-class scenario localized for Russian onboarding.",
-      ru: "Сценарий первого урока, локализованный для русскоязычного онбординга."
-    },
-    lessons: localizationScope
+    ko: "선생님과 첫 수업",
+    en: "First Lesson with the Teacher",
+    ru: "Первый урок с преподавателем",
+    icon: "book",
+    color: "#2fb985"
   },
   {
     number: "09",
-    level: "Beginner",
-    title: { en: "Convenience Store", ru: "Магазин у дома" },
-    summary: {
-      en: "Convenience store scenario with Russian course labels.",
-      ru: "Сценарий магазина у дома с русскими подписями курса."
-    },
-    lessons: localizationScope
+    ko: "편의점에서 물건 사기",
+    en: "Convenience Store",
+    ru: "Магазин у дома",
+    icon: "store",
+    color: "#f05a79"
   },
   {
     number: "10",
-    level: "Beginner",
-    title: { en: "Ordering At A Coffee Shop", ru: "Заказ в кофейне" },
-    summary: {
-      en: "Coffee shop ordering unit ready for Russian localization.",
-      ru: "Юнит про заказ в кофейне, подготовленный под русскую локализацию."
-    },
-    lessons: localizationScope
+    ko: "카페에서 주문하기",
+    en: "Ordering at a Coffee Shop",
+    ru: "Заказ в кофейне",
+    icon: "coffee",
+    color: "#9b6ae8"
   },
   {
     number: "11",
-    level: "Beginner",
-    title: { en: "Meeting Your Korean Friend", ru: "Встреча с корейским другом" },
-    summary: {
-      en: "Friend-meeting scenario mapped to Russian title and UI text.",
-      ru: "Сценарий встречи с другом с русским названием и UI-текстами."
-    },
-    lessons: localizationScope
+    ko: "한국 친구 만나기",
+    en: "Meeting Your Korean Friend",
+    ru: "Встреча с корейским другом",
+    icon: "chat",
+    color: "#31b7aa"
   },
   {
     number: "12",
-    level: "Beginner",
-    title: { en: "Korean Restaurant: Korean BBQ Restaurant", ru: "Корейский ресторан: корейское барбекю" },
-    summary: {
-      en: "Korean BBQ restaurant section localized for Russian learners.",
-      ru: "Раздел про корейское барбекю, локализованный для русскоязычных учеников."
-    },
-    lessons: localizationScope
+    ko: "고깃집에서 식사하기",
+    en: "Korean Restaurant: Korean BBQ Restaurant",
+    ru: "Корейский ресторан: барбекю",
+    icon: "grill",
+    color: "#f28d37"
   },
   {
     number: "13",
-    level: "Beginner",
-    title: { en: "Korean Friend's Home", ru: "Дома у корейского друга" },
-    summary: {
-      en: "Home-visit scenario with Russian course mapping.",
-      ru: "Сценарий визита домой к другу с русской структурой курса."
-    },
-    lessons: localizationScope
+    ko: "한국 친구 집에 가기",
+    en: "Korean Friend's Home",
+    ru: "Дома у корейского друга",
+    icon: "home",
+    color: "#4e91e6"
   },
   {
     number: "14",
-    level: "Beginner",
-    title: { en: "Delivery Food In Korea", ru: "Доставка еды в Корее" },
-    summary: {
-      en: "Food delivery scenario prepared for Russian localization.",
-      ru: "Сценарий доставки еды, подготовленный для русской локализации."
-    },
-    lessons: localizationScope
+    ko: "한국에서 배달 음식 주문하기",
+    en: "Delivery Food in Korea",
+    ru: "Доставка еды в Корее",
+    icon: "delivery",
+    color: "#17c6bf"
   },
   {
     number: "15",
-    level: "Beginner",
-    title: { en: "Weather In Korea", ru: "Погода в Корее" },
-    summary: {
-      en: "Weather unit with Russian learner-facing labels.",
-      ru: "Юнит о погоде с русскими подписями для учеников."
-    },
-    lessons: localizationScope
+    ko: "한국 날씨 말하기",
+    en: "Weather in Korea",
+    ru: "Погода в Корее",
+    icon: "weather",
+    color: "#ffb52f"
   },
   {
     number: "16",
-    level: "Beginner",
-    title: { en: "Starting My First Day At Teuida", ru: "Мой первый день в Teuida" },
-    summary: {
-      en: "Brand-specific course section preserved for integration proposal context.",
-      ru: "Брендовый раздел сохранен в контексте предложения интеграции русской локализации."
-    },
-    lessons: localizationScope
+    ko: "트이다 첫 출근",
+    en: "Starting My First Day at Teuida",
+    ru: "Мой первый день в Teuida",
+    icon: "office",
+    color: "#6ec65e"
   },
   {
     number: "17",
-    level: "Beginner",
-    title: { en: "A Korean Friend's Birthday", ru: "День рождения корейского друга" },
-    summary: {
-      en: "Birthday scenario mapped to Russian course labels.",
-      ru: "Сценарий дня рождения с русскими названиями курса."
-    },
-    lessons: localizationScope
+    ko: "한국 친구 생일",
+    en: "A Korean Friend's Birthday",
+    ru: "День рождения корейского друга",
+    icon: "gift",
+    color: "#ee6ab2"
   },
   {
     number: "18",
-    level: "Beginner",
-    title: { en: "Watching A Korean Drama", ru: "Просмотр корейской дорамы" },
-    summary: {
-      en: "K-drama scenario localized for Russian-speaking learners.",
-      ru: "Сценарий просмотра дорамы, локализованный для русскоязычных учеников."
-    },
-    lessons: localizationScope
+    ko: "한국 드라마 보기",
+    en: "Watching a Korean Drama",
+    ru: "Просмотр корейской дорамы",
+    icon: "screen",
+    color: "#6f7df2"
   },
   {
     number: "19",
-    level: "Beginner",
-    title: { en: "Karaoke In Korea", ru: "Караоке в Корее" },
-    summary: {
-      en: "Karaoke scenario with Russian localization labels.",
-      ru: "Сценарий караоке с русскими локализационными подписями."
-    },
-    lessons: localizationScope
+    ko: "한국 노래방 가기",
+    en: "Karaoke in Korea",
+    ru: "Караоке в Корее",
+    icon: "mic",
+    color: "#23b7d7"
   },
   {
     number: "20",
-    level: "Beginner",
-    title: { en: "Chinese Restaurant In Korea", ru: "Китайский ресторан в Корее" },
-    summary: {
-      en: "Chinese restaurant section prepared for Russian course presentation.",
-      ru: "Раздел про китайский ресторан, подготовленный для презентации русской версии."
-    },
-    lessons: localizationScope
+    ko: "한국 중국집에서 주문하기",
+    en: "Chinese Restaurant in Korea",
+    ru: "Китайский ресторан в Корее",
+    icon: "noodles",
+    color: "#ff7f61"
   }
 ];
